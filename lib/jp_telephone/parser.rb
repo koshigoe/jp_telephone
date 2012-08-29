@@ -17,8 +17,8 @@ module JpTelephone
       JpTelephone::Number.normalize(number)
     end
 
-    def detect_type_of(number)
-      JpTelephone::Number.all_types.detect{|t| t.accept? normalized_number }
+    def detect_type_of(normalized_number)
+      JpTelephone::Number.all_types.detect{|t| t.acceptable? normalized_number }
     end
   end
 end

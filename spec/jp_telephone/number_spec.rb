@@ -20,6 +20,7 @@ describe JpTelephone::Number do
     subject { JpTelephone::Number.all_types.sort }
     it do
       should == [
+        JpTelephone::Number::IP
       ]
     end
   end
