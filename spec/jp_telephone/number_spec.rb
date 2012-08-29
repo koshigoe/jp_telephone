@@ -15,4 +15,12 @@ describe JpTelephone::Number do
       it { should == '0123456789' }
     end
   end
+
+  describe '.all_types' do
+    subject { JpTelephone::Number.all_types.sort }
+    it do
+      should == [
+      ]
+    end
+  end
 end
