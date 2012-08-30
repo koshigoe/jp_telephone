@@ -5,7 +5,7 @@ require 'jp_telephone/number'
 
 describe JpTelephone::Number::Mobile do
   describe '.acceptable?' do
-    subject { JpTelephone::Number::Mobile }
+    subject { described_class }
 
     context 'starts with 080' do
       let(:number) { '08012341234' }
@@ -24,7 +24,7 @@ describe JpTelephone::Number::Mobile do
   end
 
   describe '.new' do
-    subject { JpTelephone::Number::Mobile.new(number) }
+    subject { described_class.new(number) }
 
     describe 'parts' do
       context 'starts with 080' do

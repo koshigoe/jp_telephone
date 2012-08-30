@@ -5,7 +5,7 @@ require 'jp_telephone/number'
 
 describe JpTelephone::Number::IP do
   describe '.acceptable?' do
-    subject { JpTelephone::Number::IP }
+    subject { described_class }
 
     context 'starts with 050' do
       let(:number) { '05012341234' }
@@ -19,7 +19,7 @@ describe JpTelephone::Number::IP do
   end
 
   describe '.new' do
-    subject { JpTelephone::Number::IP.new(number) }
+    subject { described_class.new(number) }
 
     describe 'parts' do
       let(:number) { '05012345678' }
