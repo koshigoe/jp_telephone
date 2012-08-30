@@ -5,6 +5,7 @@ module JpTelephone
     autoload :Base, 'jp_telephone/number/base'
     autoload :IP, 'jp_telephone/number/ip'
     autoload :Mobile, 'jp_telephone/number/mobile'
+    autoload :PHS, 'jp_telephone/number/phs'
 
     def self.normalize(number)
       NKF.nkf('-m0Z1 -w', number).gsub(/[^0-9]/, '')

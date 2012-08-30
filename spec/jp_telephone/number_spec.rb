@@ -21,7 +21,8 @@ describe JpTelephone::Number do
     it do
       should == [
         JpTelephone::Number::IP,
-        JpTelephone::Number::Mobile
+        JpTelephone::Number::Mobile,
+        JpTelephone::Number::PHS,
       ]
     end
   end
