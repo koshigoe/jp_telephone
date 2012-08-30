@@ -3,7 +3,7 @@ module JpTelephone
   module Number
     class Mobile < Base
       def self.acceptable?(normalized_number)
-        %w(080 090).include? normalized_number[0,3]
+        %w(080 090).include?(normalized_number[0,3]) && normalized_number[3,1] != '0'
       end
 
       protected
