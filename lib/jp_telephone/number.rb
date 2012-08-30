@@ -11,7 +11,7 @@ module JpTelephone
     autoload :PocketBell, 'jp_telephone/number/pocket_bell'
     autoload :FreeDial, 'jp_telephone/number/free_dial'
     autoload :NaviDial, 'jp_telephone/number/navi_dial'
-    # autoload :Q2, 'jp_telephone/number/q2'
+    autoload :Q2, 'jp_telephone/number/q2'
 
     def self.normalize(number)
       NKF.nkf('-m0Z1 -w', number).gsub(/[^0-9]/, '')

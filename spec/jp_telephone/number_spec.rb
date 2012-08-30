@@ -28,7 +28,7 @@ describe JpTelephone::Number do
         JpTelephone::Number::NaviDial,
         JpTelephone::Number::PHS,
         JpTelephone::Number::PocketBell,
-        # JpTelephone::Number::Q2,
+        JpTelephone::Number::Q2,
       ]
     end
   end
