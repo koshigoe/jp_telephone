@@ -17,10 +17,11 @@ describe JpTelephone::Number do
   end
 
   describe '.all_types' do
-    subject { JpTelephone::Number.all_types.sort }
+    subject { JpTelephone::Number.all_types.sort_by{|c| c.name } }
     it do
       should == [
-        JpTelephone::Number::IP
+        JpTelephone::Number::IP,
+        JpTelephone::Number::Mobile
       ]
     end
   end

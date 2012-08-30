@@ -7,10 +7,11 @@ module JpTelephone
 
       def initialize(normalized_number)
         @parts = []
+        @carrier = nil
         parse(normalized_number)
       end
 
-      attr_reader :parts
+      attr_reader :parts, :carrier
 
       # TODO: format
       def to_s

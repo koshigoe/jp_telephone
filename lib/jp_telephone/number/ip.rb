@@ -6,18 +6,16 @@ module JpTelephone
         normalized_number[0, 3] == '050'
       end
 
-      attr_reader :company
-
       protected
       def parse(normalized_number)
         return unless /\A(\d{3})(\d{4})(\d{4})/ =~ normalized_number
         @parts = $1, $2, $3
-        detect_company
+        detect_carrier
       end
 
       # http://www.soumu.go.jp/main_content/000124095.pdf
-      def detect_company
-        @company = case @parts[1].to_i
+      def detect_carrier
+        @carrier = case @parts[1].to_i
                    when 1000..1812
                      'ソフトバンクＢＢ'
                    when 2000..2036
