@@ -7,6 +7,7 @@ module JpTelephone
     autoload :Mobile, 'jp_telephone/number/mobile'
     autoload :PHS, 'jp_telephone/number/phs'
     autoload :PocketBell, 'jp_telephone/number/pocket_bell'
+    autoload :FreeDial, 'jp_telephone/number/free_dial'
 
     def self.normalize(number)
       NKF.nkf('-m0Z1 -w', number).gsub(/[^0-9]/, '')
