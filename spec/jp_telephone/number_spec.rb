@@ -23,6 +23,7 @@ describe JpTelephone::Number do
         JpTelephone::Number::IP,
         JpTelephone::Number::Mobile,
         JpTelephone::Number::PHS,
+        JpTelephone::Number::PocketBell,
       ]
     end
   end
