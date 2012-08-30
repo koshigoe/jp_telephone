@@ -20,11 +20,15 @@ describe JpTelephone::Number do
     subject { JpTelephone::Number.all_types.sort_by{|c| c.name } }
     it do
       should == [
+        # JpTelephone::Number::Business,
         JpTelephone::Number::FreeDial,
         JpTelephone::Number::IP,
+        # JpTelephone::Number::Landline,
         JpTelephone::Number::Mobile,
+        JpTelephone::Number::NaviDial,
         JpTelephone::Number::PHS,
         JpTelephone::Number::PocketBell,
+        # JpTelephone::Number::Q2,
       ]
     end
   end
