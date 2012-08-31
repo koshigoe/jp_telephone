@@ -7,8 +7,8 @@ describe JpTelephone::Parser do
     context 'type of telephone number is unknown' do
       it 'should raise JpTelephone::ParserNotFound' do
         expect {
-          described_class.new.parse('０１２３４５６７８９')
-        }.to raise_error(JpTelephone::ParserNotFound, '0123456789')
+          described_class.new.parse('１２３４５６７８９０')
+        }.to raise_error(JpTelephone::ParserNotFound, '1234567890')
       end
     end
 
@@ -18,10 +18,10 @@ describe JpTelephone::Parser do
         let(:number) { '05012341234' }
         it { should be_an_instance_of JpTelephone::Number::IP }
       end
-      # context '固定電話' do
-      #   let(:number) { '' }
-      #   it { should be_an_instance_of JpTelephone::Number::Landline }
-      # end
+      context '固定電話' do
+        let(:number) { '0312341234' }
+        it { should be_an_instance_of JpTelephone::Number::Landline }
+      end
       context '携帯電話(090)' do
         let(:number) { '09012312345' }
         it { should be_an_instance_of JpTelephone::Number::Mobile }

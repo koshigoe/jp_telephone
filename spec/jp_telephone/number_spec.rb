@@ -23,7 +23,7 @@ describe JpTelephone::Number do
         # JpTelephone::Number::Business,
         JpTelephone::Number::FreeDial,
         JpTelephone::Number::IP,
-        # JpTelephone::Number::Landline,
+        JpTelephone::Number::Landline,
         JpTelephone::Number::Mobile,
         JpTelephone::Number::NaviDial,
         JpTelephone::Number::PHS,

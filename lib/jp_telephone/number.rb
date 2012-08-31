@@ -5,7 +5,7 @@ module JpTelephone
     autoload :Base, 'jp_telephone/number/base'
     # autoload :Business, 'jp_telephone/number/business'
     autoload :IP, 'jp_telephone/number/ip'
-    # autoload :Landline, 'jp_telephone/number/lindline'
+    autoload :Landline, 'jp_telephone/number/landline'
     autoload :Mobile, 'jp_telephone/number/mobile'
     autoload :PHS, 'jp_telephone/number/phs'
     autoload :PocketBell, 'jp_telephone/number/pocket_bell'

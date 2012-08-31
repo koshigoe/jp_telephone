@@ -7,3 +7,7 @@ group :development, :test do
   gem 'rake'
   gem 'rspec'
 end
+
+group :development do
+  gem 'spreadsheet'
+end
