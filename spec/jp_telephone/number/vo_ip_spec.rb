@@ -3,7 +3,7 @@ require 'spec_helper'
 require 'csv'
 require 'jp_telephone/number'
 
-describe JpTelephone::Number::IP do
+describe JpTelephone::Number::VoIP do
   describe '.acceptable?' do
     subject { described_class }
 

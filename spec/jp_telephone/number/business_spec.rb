@@ -34,14 +34,14 @@ describe JpTelephone::Number::Business do
     describe 'parts' do
       let(:number) { '00105012345678' }
       its(:parts) { should == ['001', '050', '1234', '5678'] }
-      its(:number) { should be_an_instance_of JpTelephone::Number::IP }
+      its(:number) { should be_an_instance_of JpTelephone::Number::VoIP }
     end
 
     describe 'carrier' do
       context '00105012341234' do
         let(:number) { "00105012341234" }
         its(:carrier) { should == 'ＫＤＤＩ' }
-        its(:number) { should be_an_instance_of JpTelephone::Number::IP }
+        its(:number) { should be_an_instance_of JpTelephone::Number::VoIP }
       end
 
       path = File.join(File.dirname(__FILE__), '..', '..', 'data', 'number', '00.csv')

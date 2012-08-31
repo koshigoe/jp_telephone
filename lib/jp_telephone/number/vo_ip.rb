@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 module JpTelephone
   module Number
-    class IP < Base
+    class VoIP < Base
       def self.acceptable?(normalized_number)
         normalized_number[0, 3] == '050'
       end

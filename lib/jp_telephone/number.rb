@@ -4,7 +4,7 @@ module JpTelephone
   module Number
     autoload :Base, 'jp_telephone/number/base'
     autoload :Business, 'jp_telephone/number/business'
-    autoload :IP, 'jp_telephone/number/ip'
+    autoload :VoIP, 'jp_telephone/number/vo_ip'
     autoload :Landline, 'jp_telephone/number/landline'
     autoload :Mobile, 'jp_telephone/number/mobile'
     autoload :PHS, 'jp_telephone/number/phs'

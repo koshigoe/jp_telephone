@@ -22,13 +22,13 @@ describe JpTelephone::Number do
       should == [
         JpTelephone::Number::Business,
         JpTelephone::Number::FreeDial,
-        JpTelephone::Number::IP,
         JpTelephone::Number::Landline,
         JpTelephone::Number::Mobile,
         JpTelephone::Number::NaviDial,
         JpTelephone::Number::PHS,
         JpTelephone::Number::PocketBell,
         JpTelephone::Number::Q2,
+        JpTelephone::Number::VoIP,
       ]
     end
   end

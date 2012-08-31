@@ -16,7 +16,7 @@ describe JpTelephone::Parser do
       subject { described_class.new.parse(number) }
       context 'IP電話' do
         let(:number) { '05012341234' }
-        it { should be_an_instance_of JpTelephone::Number::IP }
+        it { should be_an_instance_of JpTelephone::Number::VoIP }
       end
       context '固定電話' do
         let(:number) { '0312341234' }
