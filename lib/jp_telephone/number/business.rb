@@ -12,12 +12,12 @@ module JpTelephone
 
       protected
       def parse(normalized_number)
-        carrier_number, number = case normalized_number[0, 3]
-                                 when '001'
+        carrier_number, number = case normalized_number
+                                 when /\A001/
                                    [normalized_number[0, 3], normalized_number[3..-1]]
-                                 when /00[2-8]/
+                                 when /\A00[2-8]/
                                    [normalized_number[0, 5], normalized_number[5..-1]]
-                                 when /009/
+                                 when /\A0091/
                                    [normalized_number[0, 6], normalized_number[6..-1]]
                                  end
         @number = JpTelephone::Parser.new.parse(number)

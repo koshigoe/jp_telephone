@@ -8,17 +8,17 @@ describe JpTelephone::Number::Business do
     subject { described_class }
 
     context 'starts with 00' do
-      let(:number) { '00' }
+      let(:number) { '00105012341234' }
       it { should be_acceptable(number) }
     end
 
     context 'starts with 002' do
-      let(:number) { '002' }
+      let(:number) { '002005012341234' }
       it { should be_acceptable(number) }
     end
 
-    context 'starts with 009' do
-      let(:number) { '009' }
+    context 'starts with 0091' do
+      let(:number) { '00912005012341234' }
       it { should be_acceptable(number) }
     end
 
