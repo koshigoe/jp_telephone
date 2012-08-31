@@ -1,5 +1,6 @@
 require "jp_telephone/version"
 
 module JpTelephone
-  # Your code goes here...
+  autoload :Number, 'jp_telephone/number'
+  autoload :Parser, 'jp_telephone/parser'
 end
